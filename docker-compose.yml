@@ -1,0 +1,70 @@
+version: '3.3'
+
+services:
+
+    loadbalancer:
+        build:
+            context: ./loadBalancer
+            dockerfile: Dockerfile
+        container_name: loadbalancer
+        ports: 
+            - 8081:8080
+    web:
+        build:
+            context: ./laboratorioVirtualizacionAYGO
+            dockerfile: Dockerfile
+        container_name: web_1
+        ports: 
+            - 35001:8080
+        expose:
+            - 35001
+    web2:
+        build:
+            context: ./laboratorioVirtualizacionAYGO
+            dockerfile: Dockerfile
+        container_name: web2_2
+        ports: 
+            - 35002:8080
+        expose:
+            - 35002
+    web3:
+        build:
+            context: ./laboratorioVirtualizacionAYGO
+            dockerfile: Dockerfile
+        container_name: web3_3
+        ports: 
+            - 35003:8080
+        expose:
+            - 35003
+            
+    db:
+        image: mongo:3.6.1
+        container_name: db_mongo
+        volumes:
+            - mongodb:/data/db
+            - mongodb_config:/data/configdb
+        ports:
+            - 27017:27017
+        command: mongod
+        
+    nginx:
+        image: nginx:latest
+        volumes:
+            - C:\Users\JuanArevaloMerchan\Documents\Maestria\AygoVirtualizacion\nginx:/etc/nginx/conf.d
+            - C:\Users\JuanArevaloMerchan\Documents\Maestria\AygoVirtualizacion\static:/usr/share/nginx/html
+        links:
+            - web
+            - web2
+            - web3
+        container_name: nginx_server
+        ports:
+            - 80:80  
+            - 8000:8000
+        expose: 
+            - 80
+            - 8000
+    
+        
+volumes:
+    mongodb:
+    mongodb_config: 

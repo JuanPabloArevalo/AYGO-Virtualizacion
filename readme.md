@@ -2,13 +2,17 @@
 
 ## OBJETIVOS
 	1. Creación de una base de datos no relacional en MongoDB.
-	2. Creación API REST, el cuál recibe una cadena, lo almacena en la base de datos no relacional (MongoDB) y retorna los 10 últimos registros que se han insertado.
-	3. Creación de un balanceador de carga(API REST), el cuál recibe una cadena y lo envia a uno de los 3 servicios creados (Servicio API REST del punto 2) utilizando Round Robin
+	2. Creación API REST, el cuál recibe una cadena, lo almacena en la 
+		base de datos no relacional (MongoDB) y retorna los 10 últimos 
+		registros que se han insertado.
+	3. Creación de un balanceador de carga(API REST), el cuál recibe una 
+		cadena y lo envia a uno de los 3 servicios creados (Servicio API REST 
+		del punto 2) utilizando Round Robin
 	4. Front-End Boostrap
 	5. Despliegue de la arquitectura en AWS en una máquina virtual EC3
 	
 ### Diagrama Arquitectura Propuesta
-	![](ImagenesReadme/ArquitecturaPropuesta.png)
+	![Alt text](ImagenesReadme/ArquitecturaPropuesta.png)
 	
 ## SOLUCIÓN DESARROLLADA
 
@@ -18,7 +22,9 @@
 	
 ### Balanceo de carga (loadBalancer)
 	Se ha desarrollado bajo el framework Spring Boot. 
-	En esta parte del proyecto se encuentra almacenado el front-end y el balanceador de carga. El front-end esta desarrollado en boostrap y utiliza JQuery para comunicarse con el balanceador de carga.
+	En esta parte del proyecto se encuentra almacenado el front-end 
+	y el balanceador de carga. El front-end esta desarrollado en 
+	boostrap y utiliza JQuery para comunicarse con el balanceador de carga.
 	Utiliza el puerto 80.
 	
 ### API REST
@@ -55,14 +61,14 @@
 	```
 	
 	Al abrir docker debe quedar así:
-	![](ImagenesReadme/DockerActivo.PNG)
+	![Alt text](ImagenesReadme/DockerActivo.PNG)
 	
 
 ## PRUEBAS
 	1. Abrir navegador con la URL localhost:
-	![](ImagenesReadme/PruebaLocal.PNG)
+	![Alt text](ImagenesReadme/PruebaLocal.PNG)
 	2. Insertar una nueva cadena
 	3. Validar datos ingresados
-	![](ImagenesReadme/PruebaLocalResultado.PNG)
+	![Alt text](ImagenesReadme/PruebaLocalResultado.PNG)
 	
 

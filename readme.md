@@ -13,7 +13,7 @@
 	
 ### Diagrama Arquitectura Propuesta
 
-![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png)
+![Alt text](ImagenesReadme/ArquitecturaPropuesta.png)
 	
 ## SOLUCIÓN DESARROLLADA
 
@@ -67,9 +67,9 @@
 
 ## PRUEBAS
 	1. Abrir navegador con la URL localhost:
-	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/PruebaLocal.PNG)
+![Alt text](ImagenesReadme/PruebaLocal.PNG)
 	2. Insertar una nueva cadena
 	3. Validar datos ingresados
-	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/PruebaLocalResultado.PNG)
+![Alt text](ImagenesReadme/PruebaLocalResultado.PNG)
 	
 

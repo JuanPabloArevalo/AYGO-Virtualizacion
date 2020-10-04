@@ -39,26 +39,24 @@
 
 ## INSTALACIÓN
 	
-	1. Clonar el repositorio:
+	1. Clonar el repositorio: (Consola)
 	
-
-git clone https://github.com/JuanPabloArevalo/AYGOVirtualizacion
-
-	
-	2. Generar el ejecutable de los APIRest
-
-cd loadBalancer
-mvn clean install
-cd ..
-cd laboratorioVirtualizacionAYGO
-mvn clean install
-cd ..
+	git clone https://github.com/JuanPabloArevalo/AYGOVirtualizacion
 
 	
-	3. Ejecutar el docker-compose
+	2. Generar el ejecutable de los APIRest (Consola)
 
-sh
-docker-compose up -d 
+	cd loadBalancer
+	mvn clean install
+	cd ..
+	cd laboratorioVirtualizacionAYGO
+	mvn clean install
+	cd ..
+
+	
+	3. Ejecutar el docker-compose (Consola)
+	
+	docker-compose up -d 
 
 	
 	Al abrir docker debe quedar así:

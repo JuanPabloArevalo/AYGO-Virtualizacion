@@ -41,25 +41,25 @@
 	
 	1. Clonar el repositorio:
 	
-	```sh
-	$ git clone https://github.com/JuanPabloArevalo/AYGOVirtualizacion
-	```
+```sh
+$ git clone https://github.com/JuanPabloArevalo/AYGOVirtualizacion
+```
 	
 	2. Generar el ejecutable de los APIRest
-	```sh
-	$ cd loadBalancer
-	$ mvn clean install
-	$ cd ..
-	$ cd laboratorioVirtualizacionAYGO
-	$ mvn clean install
-	$ cd ..
-	```
+```sh
+$ cd loadBalancer
+$ mvn clean install
+$ cd ..
+$ cd laboratorioVirtualizacionAYGO
+$ mvn clean install
+$ cd ..
+```
 	
 	3. Ejecutar el docker-compose
 
-	```sh
-	$ docker-compose up -d 
-	```
+```sh
+$ docker-compose up -d 
+```
 	
 	Al abrir docker debe quedar así:
 ![Alt text](ImagenesReadme/DockerActivo.PNG)

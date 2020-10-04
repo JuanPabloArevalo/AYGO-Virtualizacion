@@ -13,7 +13,7 @@
 	
 ### Diagrama Arquitectura Propuesta
 
-	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png)
+![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png)
 	
 ## SOLUCIÓN DESARROLLADA
 

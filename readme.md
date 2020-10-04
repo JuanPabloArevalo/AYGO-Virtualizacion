@@ -30,7 +30,7 @@
 	
 ### API REST
 	Se ha desarrollado con el framework Spring Boot.
-	Utiliza Dependence Injection
+	Utiliza Dependency Injection
 	Utiliza la libreria MongoRepository para la conexión con la base de datos Mongo.
 	Utiliza el puerto 8080
 

@@ -12,7 +12,7 @@
 	5. Despliegue de la arquitectura en AWS en una máquina virtual EC3
 	
 ### Diagrama Arquitectura Propuesta
-https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png
+
 	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png)
 	
 ## SOLUCIÓN DESARROLLADA
@@ -62,14 +62,14 @@ https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/Ima
 	```
 	
 	Al abrir docker debe quedar así:
-	![Alt text](ImagenesReadme/DockerActivo.PNG)
+	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/DockerActivo.PNG)
 	
 
 ## PRUEBAS
 	1. Abrir navegador con la URL localhost:
-	![Alt text](ImagenesReadme/PruebaLocal.PNG)
+	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/PruebaLocal.PNG)
 	2. Insertar una nueva cadena
 	3. Validar datos ingresados
-	![Alt text](ImagenesReadme/PruebaLocalResultado.PNG)
+	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/PruebaLocalResultado.PNG)
 	
 

@@ -66,8 +66,7 @@
 ## PRUEBAS
 	1. Abrir navegador con la URL localhost:
 ![Alt text](ImagenesReadme/PruebaLocal.PNG)
-	2. Insertar una nueva cadena
-	3. Validar datos ingresados
+	2. Insertar una nueva cadena y validar datos ingresados
 ![Alt text](ImagenesReadme/PruebaLocalResultado.PNG)
 	
 

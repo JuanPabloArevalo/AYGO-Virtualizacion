@@ -27,13 +27,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class BalanceController {
-	String client1 = "http://127.0.0.1:35001/cadenas/actuales";
-	String client2 = "http://127.0.0.1:35002/cadenas/actuales";
-	String client3 = "http://127.0.0.1:35003/cadenas/actuales";
+	String client1 = "http://172.17.0.1:35001/cadenas/actuales";
+	String client2 = "http://172.17.0.1:35002/cadenas/actuales";
+	String client3 = "http://172.17.0.1:35003/cadenas/actuales";
     
     @CrossOrigin(origins = "*")
     @RequestMapping(path = "balanceador", method = RequestMethod.POST, consumes =MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> addCadena(@RequestBody Nombre cadena) {
+    	System.out.println("Se ha recibido una petición: "+cadena.getName());
     	String urlClient = "";
     	if(BalanceApplication.cliente == 1){
     		urlClient = client1;

@@ -1,12 +1,68 @@
-No logre el objetivo completo. 
-Me fallo el balanceador de carga. Intente lo siguiente:
-  1. Crear mi propio balanceador de carga, el cuál recibia la petición del front-end y como era balanceado por round-robin iba realizando petición una a una. Manejando
-	una variable que me iba diciendo en que servicio estaba. Este balanceador me generaba una petición HTTP, el cuál cumplia la misión de solicitar y devolver el
-	resultado al front. La falla acá es la comunición entre los docker por http, como cada uno maneja capa de red diferente, no pude configurar para que se comunicaran.
-  2. Utilizar un balanceador de carga Nginx. Y a su vez también era el encargado de tener el front end almacenado. El problema es que no supe comunicar el front  con el
-	balanceador de carga. Si el front estaba en el puerto 80, el balanceador de carga no funcionaba. No sabia como comunicar estos dos.
-  3. Un balanceador de carga nginx y un servicio web nginx. Al igual que el anterior, estaba utilizando para el front Jquery para comunicarme entre el front y el 
-	balanceador de carga, al realizar la petición post con http, me fallaba porque no encontraba la IP del balanceador de carga.
+# Virtualización
 
-La conexión entre los backend y la base de datos si logre conectarlo. Esto me sirvio bien.
-Al probar mi balanceador de carga del punto 1 en local me funcionaba perfecto. Al ponerlo en docker me dejaba de funcionar	
+## OBJETIVOS
+	1. Creación de una base de datos no relacional en MongoDB.
+	2. Creación API REST, el cuál recibe una cadena, lo almacena en la base de datos no relacional (MongoDB) y retorna los 10 últimos registros que se han insertado.
+	3. Creación de un balanceador de carga(API REST), el cuál recibe una cadena y lo envia a uno de los 3 servicios creados (Servicio API REST del punto 2) utilizando Round Robin
+	4. Front-End Boostrap
+	5. Despliegue de la arquitectura en AWS en una máquina virtual EC3
+	
+### Diagrama Arquitectura Propuesta
+	![](ImagenesReadme/ArquitecturaPropuesta.png)
+	
+## SOLUCIÓN DESARROLLADA
+
+### Requerimientos previos
+	1. [Docker](https://www.docker.com/)
+	2. [Docker Compose](https://docs.docker.com/compose/).
+	
+### Balanceo de carga (loadBalancer)
+	Se ha desarrollado bajo el framework Spring Boot. 
+	En esta parte del proyecto se encuentra almacenado el front-end y el balanceador de carga. El front-end esta desarrollado en boostrap y utiliza JQuery para comunicarse con el balanceador de carga.
+	Utiliza el puerto 80.
+	
+### API REST
+	Se ha desarrollado con el framework Spring Boot.
+	Utiliza Dependence Injection
+	Utiliza la libreria MongoRepository para la conexión con la base de datos Mongo.
+	Utiliza el puerto 8080
+
+### Base de datos No relacional	
+	Se ha utilizado la imagen docker mongo:3.6.1
+
+## INSTALACIÓN
+	
+	1. Clonar el repositorio:
+	
+	```sh
+	$ git clone https://github.com/JuanPabloArevalo/AYGOVirtualizacion
+	```
+	
+	2. Generar el ejecutable de los APIRest
+	```sh
+	$ cd loadBalancer
+	$ mvn clean install
+	$ cd ..
+	$ cd laboratorioVirtualizacionAYGO
+	$ mvn clean install
+	$ cd ..
+	```
+	
+	3. Ejecutar el docker-compose
+
+	```sh
+	$ docker-compose up -d 
+	```
+	
+	Al abrir docker debe quedar así:
+	![](ImagenesReadme/DockerActivo.PNG)
+	
+
+## PRUEBAS
+	1. Abrir navegador con la URL localhost:
+	![](ImagenesReadme/PruebaLocal.PNG)
+	2. Insertar una nueva cadena
+	3. Validar datos ingresados
+	![](ImagenesReadme/PruebaLocalResultado.PNG)
+	
+

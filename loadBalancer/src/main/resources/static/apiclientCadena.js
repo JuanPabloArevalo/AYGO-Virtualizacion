@@ -3,7 +3,7 @@ var apiclientCadena = (function(){
     return{
     	addCadenas(cadena){
             return $.ajax({
-                url:  equipoBackEnd+"/cadenas/actuales",
+                url:  equipoBackEnd+"/balanceador",
                 type: "POST",
                 data: '{"name":"'+cadena+'"}',
                 contentType: "application/json"});

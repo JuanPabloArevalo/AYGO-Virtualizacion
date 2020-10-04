@@ -12,7 +12,8 @@
 	5. Despliegue de la arquitectura en AWS en una máquina virtual EC3
 	
 ### Diagrama Arquitectura Propuesta
-	![Alt text](ImagenesReadme/ArquitecturaPropuesta.png)
+https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png
+	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/ArquitecturaPropuesta.png)
 	
 ## SOLUCIÓN DESARROLLADA
 

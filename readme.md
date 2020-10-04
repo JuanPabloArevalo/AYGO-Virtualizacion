@@ -62,8 +62,7 @@
 	```
 	
 	Al abrir docker debe quedar así:
-	https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/DockerActivo.PNG
-	![Alt text](https://raw.githubusercontent.com/JuanPabloArevalo/AYGOVirtualizacion/master/ImagenesReadme/DockerActivo.PNG)
+![Alt text](ImagenesReadme/DockerActivo.PNG)
 	
 
 ## PRUEBAS
